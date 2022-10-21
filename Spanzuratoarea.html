@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spanzuratoarea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Type your word</label>
+                  <input type="password" class="form-control" id="word" style="text-transform:uppercase">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Category</label>
+                  <input type="text" class="form-control" id="category" style="text-transform:uppercase">
+                </div>
+                <button type ="button" class="btn btn-outline-success" onclick="return addText(),addCategory();"><i class="las la-play"></i>Play</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <p>
+            <div class="d-grid gap-2 d-md-block text-center">
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('A'), this.disabled = true;">A</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('B'), this.disabled = true;">B</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('C'), this.disabled = true;">C</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('D'), this.disabled = true;">D</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('E'), this.disabled = true;">E</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('F'), this.disabled = true;">F</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('G'), this.disabled = true;">G</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('H'), this.disabled = true;">H</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('I'), this.disabled = true;">I</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('J'), this.disabled = true;">J</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('K'), this.disabled = true;">K</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('L'), this.disabled = true;">L</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('M'), this.disabled = true;">M</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('N'), this.disabled = true;">N</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('O'), this.disabled = true;">O</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('P'), this.disabled = true;">P</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('Q'), this.disabled = true;">Q</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('R'), this.disabled = true;">R</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('S'), this.disabled = true;">S</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('T'), this.disabled = true;">T</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('U'), this.disabled = true;">U</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('V'), this.disabled = true;">V</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('W'), this.disabled = true;">W</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('X'), this.disabled = true;">X</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('Y'), this.disabled = true;">Y</button>
+              <button type="button" class="btn btn-outline-primary btn-sm" onclick="return checkLetter('Z'), this.disabled = true;">Z</button>
+            </div>
+          </p>
+          <p>
+            <div class="text-center">
+              <ul class="list-inline" style="font-size:40px">
+                <li class="list-inline-item" id="categories" >Category: </li>
+              </ul>
+            </div>
+          </p>
+        </div>
+        <div class="col text-center" id="image">
+          <img class="hangman" src="hangman.png" alt="hangman" width="200" height="400">
+        </div>
+      </div>
+      <div class="row">
+        <ul class="col text-center" width="100" height="50">
+          <li class="list-inline-item" id="hiddenWord" style="font-size:40px">
+          </li>
+        </ul>
+        <div class="col text-center" style="font-size:30px">
+          <button type="button" class="btn btn-warning btn-lg btn-block" hidden id="restart" onclick="window.location.reload();">Play Again</button>
+        </div>
+        <div class="col text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item" style="font-size:20px">Remaining attempts: </li>
+            <li class="list-inline-item" id="counter"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center" id="game" style="font-size:50px"> 
+      </div>
+    </div>
+    <script src="Spanzuratoarea.js"></script>
+  </body>
+</html>
