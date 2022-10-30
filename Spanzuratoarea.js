@@ -1,6 +1,6 @@
 let hiddenLetters = [];
 let counter = 6, numberOfLetters = 0;
-function addText() {
+function inputWord() {
 	let words = document.getElementById('word').value;
 	let word = words.toUpperCase();
 	for (let i = 0; i < word.length; ++i) {
@@ -16,7 +16,7 @@ function addText() {
 	return false;
 }
 
-function addCategory() {
+function inputCategory() {
 	let category = document.getElementById('category').value;
 	let categories = category.toUpperCase();
 	document.querySelector("#categories").innerHTML += ``+ categories +``;
